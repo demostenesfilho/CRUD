@@ -29,6 +29,7 @@
         $sql = "CREATE TABLE usuario (";
         $sql .= "codigo INT NOT NULL AUTO_INCREMENT,";
         $sql .= "nome VARCHAR(250),";
+        $sql .= "email VARCHAR(100),";
         $sql .= "senha VARCHAR(100),";
         $sql .= "PRIMARY KEY (codigo)";
         $sql .= ");";
@@ -54,12 +55,12 @@
 
             echo "DB: Database selecionada... <br />";
 
-            $sql = "INSERT INTO usuario (nome, senha)";
-            $sql .= "VALUES ('Fulano de Tal', '12345');";
-            $sql .= "INSERT INTO usuario (nome, senha)";
-            $sql .= "VALUES ('Beltrano de Tal', '54321');";
-            $sql .= "INSERT INTO usuario (nome, senha)";
-            $sql .= "VALUES ('Cicrano de Tal', '67890');";
+            $sql = "INSERT INTO usuario (nome, email, senha)";
+            $sql .= "VALUES ('Fulano de Tal', 'fulano@email.com', '12345');";
+            $sql .= "INSERT INTO usuario (nome, email, senha)";
+            $sql .= "VALUES ('Beltrano de Tal', 'beltrano@email.com', '54321');";
+            $sql .= "INSERT INTO usuario (nome, email, senha)";
+            $sql .= "VALUES ('Cicrano de Tal', 'ciclano@email.com', '67890');";
 
             $resultado = mysqli_multi_query($CONN, $sql);
 
