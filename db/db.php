@@ -1,9 +1,9 @@
 <?php
     
     function conexao() {
-    $url = "localhost";
-    $user = "root";
-    $pass = "";
+    $url = getenv('host');
+    $user = getenv('user');
+    $pass = getenv('password');
 
     $conn = mysqli_connect($url, $user, $pass);
 
